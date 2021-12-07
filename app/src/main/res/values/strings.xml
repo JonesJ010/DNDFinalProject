@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">DND Final Project</string>
+    <string name="strength_text">Strength Mod</string>
+    <string name="dexterity_text">Dexterity Mod</string>
+    <string name="constitution_text">Constitution Mod</string>
+    <string name="intelligence_text">Intelligence Mod</string>
+    <string name="charisma_text">Charisma Mod</string>
+    <string name="base_attack_bonus_text">Base Attack Bonus</string>
+    <string name="enter_character_name_text">Enter Character Name</string>
+    <string name="level_text">Level</string>
+    <string name="enter_level_text">Enter Level</string>
+    <string name="click_to_damage_bad_guys">Click To Damage Bad Guys</string>
+    <string name="two_weapon_fighting">Two Weapon Fighting</string>
+    <string name="miscellaneous_modifier">Miscellaneous Modifier</string>
+    <string name="flanking">Flanking</string>
+    <string name="bardic_inspiration">Bardic Inspiration</string>
+    <string name="misc_modifier">Misc Attack Modifier</string>
+    <string name="calculate_attack">Calculate Attack</string>
+    <string name="reset">reset</string>
+    <string name="_0">0</string>
+    <string name="misc_damage_modifier">Misc Damage Modifier</string>
+</resources>

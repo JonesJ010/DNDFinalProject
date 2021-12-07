@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/str_textView"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#EF5B5B"
+        android:gravity="center"
+        android:text="@string/strength_text"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_level" />
+
+    <TextView
+        android:id="@+id/dex_textView"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#EF5B5B"
+        android:gravity="center"
+        android:text="@string/dexterity_text"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumber_Str"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCharLevel" />
+
+    <TextView
+        android:id="@+id/con_textView"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#EF5B5B"
+        android:gravity="center"
+        android:text="@string/constitution_text"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/str_textView" />
+
+    <TextView
+        android:id="@+id/int_textView"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#EF5B5B"
+        android:gravity="center"
+        android:text="@string/intelligence_text"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumber_Con"
+        app:layout_constraintTop_toBottomOf="@+id/dex_textView" />
+
+    <TextView
+        android:id="@+id/cha_textView"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#EF5B5B"
+        android:gravity="center"
+        android:text="@string/charisma_text"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/con_textView" />
+
+    <TextView
+        android:id="@+id/bab_textView"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#EF5B5B"
+        android:gravity="center"
+        android:text="@string/base_attack_bonus_text"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumber_Cha"
+        app:layout_constraintTop_toBottomOf="@+id/int_textView" />
+
+    <EditText
+        android:id="@+id/editTextCharName"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:background="#EF5B5B"
+        android:ems="10"
+        android:hint="@string/enter_character_name_text"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView_level"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:background="#EF5B5B"
+        android:gravity="center"
+        android:text="@string/level_text"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextCharLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCharName" />
+
+    <EditText
+        android:id="@+id/editTextCharLevel"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:background="#EF5B5B"
+        android:ems="10"
+        android:hint="@string/enter_level_text"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editTextCharName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCharName"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Str"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#EF5B5B"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/textView_level"
+        app:layout_constraintStart_toEndOf="@+id/str_textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView_level"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Dex"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#EF5B5B"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dex_textView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCharLevel"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Con"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#EF5B5B"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/textView_level"
+        app:layout_constraintStart_toEndOf="@+id/con_textView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_Str"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Int"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#EF5B5B"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/int_textView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_Dex"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Cha"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#EF5B5B"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/textView_level"
+        app:layout_constraintStart_toEndOf="@+id/cha_textView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_Con"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextNumber_BAB"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="#EF5B5B"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bab_textView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_Int"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/button_Proceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#EF5B5B"
+        android:onClick="toCalculation"
+        android:text="@string/click_to_damage_bad_guys"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bab_textView"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

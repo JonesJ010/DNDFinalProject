@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".CalculationActivity">
+
+
+    <TextView
+        android:id="@+id/textView_output"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="350dp"
+        android:background="#EF5B5B"
+        android:gravity="center"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox_TWF"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#EF5B5B"
+        android:onClick="onTWFClick"
+        android:text="@string/two_weapon_fighting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UsingOnClickInXml" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Bardic_Inspiration"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onBardicInspiration"
+        android:background="#EF5B5B"
+        android:text="@string/bardic_inspiration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_Flanking"
+        tools:ignore="UsingOnClickInXml" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Flanking"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:onClick="onFlanking"
+        android:layout_marginTop="16dp"
+        android:background="#EF5B5B"
+        android:text="@string/flanking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_TWF"
+        tools:ignore="UsingOnClickInXml" />
+
+    <TextView
+        android:id="@+id/Misc_textView"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#EF5B5B"
+        android:gravity="center"
+        android:text="@string/misc_modifier"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_Bardic_Inspiration" />
+
+    <TextView
+        android:id="@+id/Misc_Dmg_textView"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#EF5B5B"
+        android:gravity="center"
+        android:text="@string/misc_damage_modifier"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Misc_textView" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Misc_Mod"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="100dp"
+        android:background="#EF5B5B"
+        android:ems="10"
+        android:text="@string/_0"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Misc_textView"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_Bardic_Inspiration"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/editTextNumber_MiscDmg_Mod"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="100dp"
+        android:background="#EF5B5B"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="numberSigned"
+        android:text="@string/_0"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Misc_textView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber_Misc_Mod"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/calc_attack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCalculate"
+        android:text="@string/calculate_attack"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_output"
+        app:layout_constraintEnd_toStartOf="@+id/textView_output"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView_output"
+        app:layout_constraintVertical_bias="0.512"
+        tools:ignore="UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="onReset"
+        android:text="@string/reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_output"
+        tools:ignore="UsingOnClickInXml" />
+</androidx.constraintlayout.widget.ConstraintLayout>
